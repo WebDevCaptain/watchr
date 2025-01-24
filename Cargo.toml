@@ -1,6 +1,9 @@
 [package]
 name = "watchr"
 version = "0.1.0"
+description = "A simple file watcher that watches a list of paths and calls a callback when any of them change"
+license = "MIT"
+repository = "https://github.com/webdevcaptain/watchr"
 edition = "2021"
 
 [dependencies]
