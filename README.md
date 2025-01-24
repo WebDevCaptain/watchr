@@ -1,6 +1,6 @@
 # Watchr
 
-A simple and efficient Rust library for watching file system changes. It is built on top of [notify](https://github.com/kbknapp/notify) and [tokio](https://tokio.rs) crates.
+A simple and efficient Rust library for watching file system changes. It is built on top of [notify](https://github.com/notify-rs/notify) and [tokio](https://tokio.rs) crates.
 
 ## Usage
 
