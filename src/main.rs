@@ -1,4 +1,4 @@
-use watchr::{Event, FileWatcher};
+use watchr_filesystem::{Event, FileWatcher};
 
 use std::path::PathBuf;
 

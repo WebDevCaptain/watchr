@@ -12,17 +12,17 @@ A simple and efficient Rust library for watching file system changes. It is buil
 
 ## Installation
 
-Add `watchr` to your `Cargo.toml`:
+Add `watchr_filesystem` to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-watchr = "0.1.0"
+watchr_filesystem = "0.1.0"
 ```
 
 ## Usage
 
 ```rust
-use watchr::FileWatcher;
+use watchr_filesystem::FileWatcher;
 
 let watcher = FileWatcher::new(vec![PathBuf::from("./destination")]);
 
