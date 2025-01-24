@@ -3,11 +3,13 @@
 //! A simple file watcher that watches a list of paths and calls a callback when any of them change
 
 use anyhow::Result;
-use notify::{self, Event, RecommendedWatcher, RecursiveMode, Watcher};
+use notify::{self, RecommendedWatcher, RecursiveMode, Watcher};
 use std::path::PathBuf;
 use std::sync::mpsc::{channel, Receiver, Sender};
 use std::thread;
 use tokio::sync::mpsc;
+
+pub use notify::Event;
 
 /// A simple file watcher for monitoring file-system events (changes)
 pub struct FileWatcher {
@@ -21,6 +23,7 @@ impl FileWatcher {
     }
 
     /// Starts watching the provided paths and triggers the callback when any of them change
+    #[tokio::main(flavor = "current_thread")]
     pub async fn watch<F>(self, mut callback: F) -> Result<(), notify::Error>
     where
         F: FnMut(Event) + Send + 'static,
